@@ -1,0 +1,10 @@
+{
+    "token": "your-bot-token",
+    "prefix": "!",
+    "db": {
+        "hostname": "localhost",
+        "username": "idigo",
+        "password": "idigo",
+        "database": "idigo"
+    }
+}
