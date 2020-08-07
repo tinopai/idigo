@@ -1,5 +1,5 @@
 # idigo
-Idi**go**, yet another Minecraft screenshare tool made in Golang
+Idi**go**, yet another Minecraft screensharing tool made in Golang
 
 ### Disclaimer
 ⚠️ This is **__NOT__** production ready, you should add more features and fix some security issues like the (really old and bad) strings being on plaintext, you could use either AES-256-CBC encryption or decryption or just make a new PHP file with those which doesn't let you print the text and just do a require() from **pin.php** removing every <?php ?> thingy. **This uses [strings2](https://github.com/glmcdona/strings2), you should read [it's license](https://github.com/glmcdona/strings2/blob/master/license.txt), aswell as every other dependency one, like AES-Everywhere or Astilectron**
