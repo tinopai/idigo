@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+<head>
+    <meta charset="UTF-8">
+</head>
+<style>
+* {
+    overflow: hidden; /* Hide scrollbars */
+}
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.pin {
+    background-color: #121212 !important;
+    color: #41464C;
+    border-radius: 8px;
+    text-align: center;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    animation: lsd 3s infinite;
+}
+
+@keyframes lsd {
+    0% {
+        border-color: #eb4d4b;
+    }
+    50% {
+        border-color: #9b59b6;
+    }
+    100% {
+        border-color: #eb4d4b;
+    }
+}
+
+@keyframes lsdBtn {
+    0% {
+        border-color: #eb4d4b;
+        background-color: #eb4d4b;
+    }
+    25% {
+        border-color: #9b59b6;
+        background-color: #9b59b6;
+    }
+    50% {
+        border-color: #eb4d4b;
+        background-color: #eb4d4b;
+    }
+    75% {
+        border-color: #9b59b6;
+        background-color: #9b59b6;
+    }
+    100% {
+        border-color: #eb4d4b;
+        background-color: #eb4d4b;
+    }
+}
+
+@keyframes lsdIdigo {
+    0% {
+        color: #eb4d4b;
+    }
+    6% {
+        color: #f0932b;
+    }
+    12% {
+        color: #fdcb6e;
+    }
+    18% {
+        color: #00b894;
+    }
+    24% {
+        color: #48dbfb;
+    }
+    30% {
+        color: #0984e3;
+    }
+    36% {
+        color: #9b59b6;
+    }
+    42% {
+        color: #e84393;
+    }
+    48% {
+        color: #e84393;
+    }
+    54% {
+        color: #9b59b6;
+    }
+    60% {
+        color: #0984e3;
+    }
+    66% {
+        color: #48dbfb;
+    }
+    72% {
+        color: #00b894;
+    }
+    78% {
+        color: #fdcb6e;
+    }
+    90% {
+        color: #f0932b;
+    }
+    100% {
+        color: #eb4d4b;
+    }
+}
+
+.more-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actualFooter {
+    display: fixed;
+    text-align: center;
+    bottom: -5%;
+}
+.fadeout {
+    animation: fadeout 1.5s no-repeat;
+    opacity: 0%;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+</style>
+<body style="background-color: #121212;" class="no-select" id="bodyy">
+    <div id="FIDB" class="animate__animated animate__fadeInDownBig">
+        <img draggable="false" src="https://discord.monster/api/idigo/idigo.gif" style="display:block;margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom: auto;" width="128" height="128">
+        <h1 class="text-center text-light" style="animation: lsdIdigo 16s infinite;text-shadow: 0px 0px #eb4d4b;">idigo</h1>
+        <h4 id="description" class="text-center text-muted">advanced screensharing tool</h4>
+    </div>
+    <div id="FIUB" class="animate__animated animate__fadeInUpBig">
+        <div id="scanPinSection">
+            <input id="inputpin" class="pin form-control" style="width: 50%;box-shadow:none;margin-top:3%;" maxlength="6"></input>
+            <button class="btn btn-outline-primary text-center more-center" style="width: 35%;margin-top:3%;animation: lsdBtn 6s infinite;color:white;background-color: transparent;box-shadow:none;" onclick="scan()">Scan</button>
+        </div>
+        <hr style="width:80%;margin-left:10%;margin-right:10%;border-color: #252525;">
+        <footer style="color: #d0d0d0;" class="actualFooter"><a href="#" onclick="openWebsite('https://discord.gg/gjFVqeA')">discord</a></footer>
+    </div>
+</body>
+</html>
+
+<script>
+function openWebsite(url) {
+    astilectron.sendMessage(`Client::OpenWebsite|${url}`, function(message) {
+        console.log("received " + message)
+    });
+}
+
+function scan() {
+    let pin = document.getElementById("inputpin");
+    astilectron.sendMessage(`Client::Scan|${pin.value}`, (message) => {
+        if(message == false) {
+            pin.value = "";
+            pin.placeholder = "Invalid PIN";
+            pin.setAttribute("read-only", "true")
+        } else {
+            setTimeout(() => {
+                document.location = "https://discord.monster/api/idigo/scanning.html?v=" + Math.random();
+            }, 100)
+        }
+    });
+}
+
+astilectron.onMessage(function(message) {
+    // Process message
+});
+</script>
