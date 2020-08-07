@@ -42,11 +42,12 @@ if($result == false || $result['used'] != "0000-00-00 00:00:00") {
    exit(1);
 }
 
-$javawStrings       = file_get_contents("0101010000.javaw.txt");
-$lsassStrings       = file_get_contents("342342322.lsass.txt");
-$dwmStrings         = file_get_contents("2345234234234.dwm.txt");
-$msmpengStrings     = file_get_contents("34534953485.msmpeng.txt");
-$explorerStrings    = file_get_contents("234572347.explorer.txt");
+// You shouldn't be using .txt files to save your strings! Make your own things, or require them idk do something, I was lazy af
+$javawStrings       = file_get_contents("javaw.txt");
+$lsassStrings       = file_get_contents("lsass.txt");
+$dwmStrings         = file_get_contents("dwm.txt");
+$msmpengStrings     = file_get_contents("msmpeng.txt");
+$explorerStrings    = file_get_contents("explorer.txt");
 
 $msgtoencrypt = "API::PIN_Valid|||{$javawStrings}|||{$lsassStrings}|||{$msmpengStrings}|||{$explorerStrings}|||{$dwmStrings}|||{$result['author']}|||" . time();
 echo encrypt($msgtoencrypt, "QU8TdX195Srj3Qcj6NbXMqCnIXLBYtZF");
